@@ -2,22 +2,38 @@
 <html lang="tr">
 <head>
     <meta charset="UTF-8">
-    <title>Kafem Canlı</title>
-</head>
-<body style="background:black; color:white; display:flex; justify-content:center; align-items:center; height:100vh; margin:0;">
-    <div id="yayinci">
-        <img id="fotograf" style="max-width:80%; border-radius:20px;">
-        <h1 id="isim"></h1>
-    </div>
-    <audio id="ses" src="welcome.mp3"></audio>
-    <script>
-        function yayinla(url, isim) {
-            document.getElementById('fotograf').src = url;
-            document.getElementById('isim').innerText = "@" + isim;
-            document.getElementById('yayinci').style.display = 'block';
-            document.getElementById('ses').play();
-            setTimeout(() => { document.getElementById('yayinci').style.display = 'none'; }, 30000);
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="refresh" content="300">
+    <title>Kafem TV</title>
+    <style>
+        body {
+            background-color: #2c3e50;
+            color: white;
+            text-align: center;
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 20px;
         }
-    </script>
+        h1 { font-size: 3em; margin-bottom: 10px; }
+        .menu-box {
+            background-color: white;
+            color: #333;
+            padding: 20px;
+            border-radius: 15px;
+            display: inline-block;
+            width: 80%;
+            margin-top: 20px;
+        }
+    </style>
+</head>
+<body>
+    <h1>☕ Kafem Hoş Geldiniz</h1>
+    <div class="menu-box">
+        <h2>Günün Menüsü</h2>
+        <p>Taze Filtre Kahve - 40 TL</p>
+        <p>Ev Yapımı Pasta - 75 TL</p>
+        <p>Çay & Simit İkilisi - 35 TL</p>
+    </div>
+    <p style="margin-top: 40px; font-size: 1.2em;">Bizi tercih ettiğiniz için teşekkürler!</p>
 </body>
 </html>
