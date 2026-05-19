@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="tr">
+<head>
+    <meta charset="UTF-8">
+    <title>Kafem Canlı</title>
+</head>
+<body style="background:black; color:white; display:flex; justify-content:center; align-items:center; height:100vh; margin:0;">
+    <div id="yayinci">
+        <img id="fotograf" style="max-width:80%; border-radius:20px;">
+        <h1 id="isim"></h1>
+    </div>
+    <audio id="ses" src="welcome.mp3"></audio>
+    <script>
+        function yayinla(url, isim) {
+            document.getElementById('fotograf').src = url;
+            document.getElementById('isim').innerText = "@" + isim;
+            document.getElementById('yayinci').style.display = 'block';
+            document.getElementById('ses').play();
+            setTimeout(() => { document.getElementById('yayinci').style.display = 'none'; }, 30000);
+        }
+    </script>
+</body>
+</html>
